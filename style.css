@@ -1,0 +1,424 @@
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+  
+}
+
+:root {
+
+  font-size: 62.5%;
+
+  --fs-body: 1.6rem;
+
+  --fs-h1: 4rem;
+
+  --fs-p: 1.5rem;
+
+  --fs-h2: 2rem;
+
+  --ff-primary: "Staatliches", sans-serif;
+
+  --ff-main-p: "Palanquin", sans-serif;
+
+  --fc-logo: hsl(0, 0%, 100%);
+
+  --fc-main-p: hsl(274, 84%, 12%);
+
+  --fc-h2: hsl(232, 17%, 35%);
+
+  --sf-shadow-logo: hsla(0, 0%, 0%, 0.25);
+
+  --bg-header: hsl(218, 17%, 62%);
+
+  --bg-logo: hsl(275, 18%, 79%);
+
+  --bg-main: hsl(233, 100%, 97%);
+
+  --bg-h2: hsl(312, 91%, 96%);
+}
+
+.page {
+
+  width: 38.4rem;
+
+  margin: 0 auto;
+}
+
+header {
+
+  width: 38.4rem;
+
+  height: 27.9rem;
+
+  background-color: var(--bg-header);
+
+  align-items: center;
+
+  text-align: center;
+
+  padding-bottom: 2.9rem;
+}
+
+#logo {
+
+  width: 13.7rem;
+
+  height: 13.7rem;
+
+  margin: 3.2rem;
+}
+
+header .logo-script {
+
+  width: 38.4rem;
+
+  height: 4.9rem;
+
+  background-color: var(--bg-logo);
+
+  padding: 0.8rem 8.6rem 0.7rem;
+
+}
+
+h1 {
+
+  font-family: var(--ff-primary);
+
+  font-weight: 400;
+
+  font-size: var(--fs-h1);
+
+  letter-spacing: 0.05em;
+
+  line-height: 3.4rem;
+
+  text-transform: uppercase;
+
+  color: var(--fc-logo);
+
+  text-shadow: 0px 2px 2px;
+
+}
+
+main {
+
+  width: 38.4rem;
+
+  height: 171, 6rem;
+
+  position: absolute;
+
+  background-color: var(--bg-main);
+
+  margin: o auto;
+
+}
+
+main .container .card,
+main .container .card2 {
+
+  animation: downtop 600ms 350ms backwards;
+
+}
+
+img {
+
+  width: 100%;
+
+  height: auto;
+}
+
+#message {
+
+  font-family: var(--ff-main-p);
+
+  color: var(--fc-main-p);
+
+  font-weight: 400;
+
+  font-size: var(--fs-p);
+
+  line-height: 2rem;
+
+  width: 30.5rem;
+
+  height: 7.5rem;
+
+  align-items: center;
+
+  text-align: center;
+
+  margin: 1.4rem auto 6.3rem;
+
+}
+
+.container {
+
+  display: grid;
+
+  gap: 3.2rem;
+
+}
+
+.container .card {
+
+  position: relative;
+
+  width: 32rem;
+
+  font-family: var(--ff-primary);
+
+  margin: 0 auto 3.6rem;
+
+}
+
+.container .card img {
+
+  height: 25rem;
+
+  border-radius: 20px;
+
+  object-fit: cover;
+
+  filter: brightness(0.5);
+
+  transition: all 200ms;
+
+}
+
+.container .card img:hover,
+.container .card2 img:hover {
+
+  transform: scale(1.1);
+
+  opacity: 0.4;
+}
+
+.container .card2 {
+
+  position: relative;
+
+  width: 32rem;
+
+  font-family: var(--ff-primary);
+
+  margin: 0 auto 3.6rem;
+
+}
+
+.container .card2 img {
+
+  height: 45rem;
+
+  border-radius: 20px;
+
+  object-fit: cover;
+
+  filter: brightness(0.5);
+
+  transition: all 200ms;
+
+}
+
+.container .card h2,
+.container .card2 h2 {
+
+  position: absolute;
+
+  width: fit-content;
+
+  height: 3.5rem;
+
+  background-color: var(--bg-h2);
+
+  font-weight: 400;
+
+  font-size: var(--fs-h2);
+
+  line-height: 3.4rem;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+
+  color: var(--fc-h2);
+
+  border-radius: 2rem;
+
+  padding: 0.1rem 2.3rem;
+
+  right: 1.6rem;
+
+  top: 1.7rem;
+
+  animation: topdown 1500ms 350ms forwards;
+
+}
+
+@keyframes topdown {
+
+  0% {
+
+    opacity: 0;
+
+    transform: translateY(-15px);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+}
+
+@keyframes downtop {
+
+  0% {
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+ 
+}
+
+@media (min-width:400px) {
+
+  .page,
+  main {
+
+    width: 95%;
+  }
+
+  header {
+
+    width: auto;
+
+  }
+
+  header .logo-script {
+
+    width: auto;
+
+  }
+  
+
+  
+}
+
+
+@media (min-width: 576px) {
+  .page,
+  main {
+
+    width: 96%;
+
+  }
+
+  
+}
+
+
+@media (min-width: 768px) {
+  .page,
+  main {
+
+   width: 85%;
+
+  }
+
+  main .container {
+
+    gap: 1.5rem;
+     
+    grid-template-areas: "A B" "C D";
+
+  }
+
+  main .container div:nth-child(1) {
+
+    grid-area: A;
+
+  }
+
+  main .container div:nth-child(2) {
+
+    grid-area: B;
+  }
+
+  main .container div:nth-child(3) {
+
+
+    grid-area: C;
+  }
+
+  main .container div:nth-child(4) {
+
+    grid-area: D;
+
+  }
+  
+  header {
+
+    width: auto;
+  }
+
+  header .logo-script {
+
+    width: auto;
+  }
+
+  #message {
+
+    width: 60%;
+
+    height: 25%;
+
+    font-size: 2.5rem;
+
+    line-height: 3rem;
+  }
+
+  .container .card img {
+
+    height: 45rem;
+  }
+  
+}
+
+@media (min-width: 992px) {
+
+  main {
+
+    padding: 1.5rem 7.5rem;
+
+  }
+  
+}
+
+@media (min-width: 1200px) {
+
+  main {
+
+    padding: 1.5rem 12rem;
+
+  }
+  
+}
